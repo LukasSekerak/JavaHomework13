@@ -28,7 +28,7 @@ public class Main {
 		listOfBooks.add(new Book("Lord of the Rings 1", 150));
 		listOfBooks.add(new Book("Robinson Crusoe", 50));
 		listOfBooks.add(new Book("Tarzan", 75));
-		listOfBooks.add(new Book("Pat a Mat", 120));
+		listOfBooks.add(new Book("Abcd", 120));
 		listOfBooks.add(new Book("Danka a Janka", 36));
 		listOfBooks.add(new Book("Z rozprávky do rozprávky", 45));
 		listOfBooks.add(new Book("Kniha džunglí", 110));
