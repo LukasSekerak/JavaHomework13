@@ -44,8 +44,9 @@ public class Main {
 		System.out.println("\n\nAll books that have price smaller than 100 are: ");
 		streamOfBooks1
 			.filter(x -> x.getPrice() < 100)
-			.sorted(Comparator.comparing(Book::getName))
-			.forEach(b -> System.out.println(b.getName()));
+			.map(x -> x.getName())
+			.sorted()
+			.forEach(b -> System.out.println(b));
 		
 //		3.2 Using Java stream API find out how many books have name shorter than 5 characters.
 		Stream<Book> streamOfBooks2 = listOfBooks.stream();
