@@ -10,10 +10,16 @@ public class Main {
 	public static void main(String[] args) {
 		
 //	    Using Java Stream API find out sum of all numbers between 1 and 10000 that are dividable by both 3 and 5 but not dividable by 7 
-		System.out.println("Count numbers: "+Stream.iterate(1, x -> x + 1)
+		System.out.println("Numbers are: " + Stream.iterate(1, x -> x + 1)
+		.limit(10000)
+		.filter(x -> x % 3 == 0 && x % 5 == 0 && x % 7 != 0)
+		.count());
+		
+		System.out.println("Sum of these numbers is: " + Stream.iterate(1, x -> x + 1)
 				.limit(10000)
 				.filter(x -> x % 3 == 0 && x % 5 == 0 && x % 7 != 0)
-				.count());
+				.mapToInt(i -> i)
+				.sum());
 		
 //	    Using Java Stream API print first 100 even numbers that are not dividable by 8
 		System.out.print("Numbers: ");
